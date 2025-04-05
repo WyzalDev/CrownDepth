@@ -78,6 +78,11 @@ namespace WyzalUtilities.Audio
             Instance.PlayOneShot(sfxName, containerName, audioSource);
         }
 
+        public static float GetSoundDuration(string soundName, SoundType soundType, string containerName = null)
+        {
+            return Instance.FindDurationOfSound(soundName, soundType, containerName);
+        }
+
         #endregion
 
         #region Private Methods
@@ -118,6 +123,7 @@ namespace WyzalUtilities.Audio
             if (audioContainer.TryFindSound(out var musicSound, musicName, SoundType.Music))
             {
                 audioSource.clip = musicSound.clip;
+                audioSource.volume = musicSound.volume;
                 audioSource.loop = true;
                 audioSource.Play();
             }
@@ -135,6 +141,22 @@ namespace WyzalUtilities.Audio
             if (audioContainer.TryFindSound(out var sound, soundName, soundType))
             {
                 return sound.volume;
+            }
+            else
+            {
+                Debug.LogException(new Exception($"Can't find Sound in audio container {containerName}."));
+                return 0;
+            }
+        }
+
+        private float FindDurationOfSound(string soundName, SoundType soundType, string containerName = null)
+        {
+            containerName ??= defaultContainer;
+            var audioContainer = audioContainers[containerName];
+
+            if (audioContainer.TryFindSound(out var sound, soundName, soundType))
+            {
+                return sound.clip.length;
             }
             else
             {

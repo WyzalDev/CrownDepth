@@ -13,16 +13,10 @@ MonoBehaviour:
   m_Name: DefaultAudioContainer
   m_EditorClassIdentifier: 
   musicSounds:
-  - name: french
-    volume: 0.25
-    clip: {fileID: 8300000, guid: 276593072750b004095ac1e4bda9b82f, type: 3}
-  - name: croco
+  - name: crocodile
     volume: 0.25
     clip: {fileID: 8300000, guid: 9513c3123d836c14796427ee30291d34, type: 3}
   sfxSounds:
-  - name: gay
-    volume: 0.25
-    clip: {fileID: 8300000, guid: 20b43138b8fce7d4b9d377556b61a016, type: 3}
-  - name: quack
-    volume: 0.25
-    clip: {fileID: 8300000, guid: bcbbac320a3efa048adf1cb03846429c, type: 3}
+  - name: steps
+    volume: 0.5
+    clip: {fileID: 8300000, guid: 47cfb19b1f0df3c4196965b7b2db23c0, type: 3}
