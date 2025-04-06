@@ -656,9 +656,11 @@ MonoBehaviour:
   - name: first Incident
     action: {fileID: 11400000, guid: 859b74443665b5b449671ca879f1a07a, type: 2}
     npcType: 0
+    waitBetweenIncidents: 0.5
   - name: second Incident
     action: {fileID: 11400000, guid: a956fc3138e0f5a4ca2d2256da067639, type: 2}
     npcType: 0
+    waitBetweenIncidents: 0.5
   currentIncidentIndex: 0
 --- !u!224 &1140572350 stripped
 RectTransform:

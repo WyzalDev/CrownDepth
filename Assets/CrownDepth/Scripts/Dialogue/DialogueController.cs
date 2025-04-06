@@ -73,6 +73,16 @@ namespace CrownDepth.Dialogue
             if (_paragraphs.Count == 0) _conversationEnded = true;
         }
 
+        public bool isActive()
+        {
+            return gameObject.activeSelf;
+        }
+
+        public bool isLastParagraph()
+        {
+            return _paragraphs.Count == 1;
+        }
+
         private void StartConversation(DialogueText dialogue)
         {
             //activate dialogue box
@@ -126,7 +136,7 @@ namespace CrownDepth.Dialogue
             StopCoroutine(_typeDialogCoroutine);
 
             //finish displaying text
-            npcDialogueText.text = _p;
+            npcDialogueText.maxVisibleCharacters = npcDialogueText.text.Length;
 
             //update _isTyping bool
             _isTyping = false;

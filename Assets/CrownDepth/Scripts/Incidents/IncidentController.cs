@@ -15,7 +15,7 @@ namespace CrownDepth.Incidents
 
         private void Start()
         {
-            AudioContext.PlayGlobalMusic("crocodile");
+            //AudioContext.PlayGlobalMusic("crocodile");
             if (_incidents.Count() == 0) return;
             ResetUI();
             StartCoroutine(ExecuteIncidents());

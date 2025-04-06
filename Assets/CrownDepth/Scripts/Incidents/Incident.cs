@@ -26,8 +26,6 @@ namespace CrownDepth.Incidents
 
         private static ChoosenCard choosenCard = ChoosenCard.One;
 
-        private static WaitForSeconds _cachedWait = new WaitForSeconds(0.5f);
-
         public IEnumerator Execute()
         {
             EventManager.InvokeStartIncident();
@@ -41,7 +39,7 @@ namespace CrownDepth.Incidents
             };
 
             yield return PlayStepsSound();
-            yield return _cachedWait;
+            yield return new WaitForSeconds(waitBetweenIncidents);
 
             EventManager.InvokeEndIncident();
         }
@@ -56,13 +54,12 @@ namespace CrownDepth.Incidents
 
             var dialogueText = dialogueAction.dialogueText;
 
-            for (var i = 0; dialogueText.IsExists(i); i++)
-            {
-                dialogueController.DisplayNextParagraph(dialogueText);
+            dialogueController.DisplayNextParagraph(dialogueText);
+            while(dialogueController.isActive()) {
                 yield return WaitUntilSkipped();
+                dialogueController.DisplayNextParagraph(dialogueText);
             }
 
-            dialogueController.DisplayNextParagraph(dialogueText);
 
             dialogueAction.consequence.ApplyConsequences();
         }
@@ -77,14 +74,14 @@ namespace CrownDepth.Incidents
 
             var dialogueText = choiceAndDialogue.dialogueText;
 
+            
             //handle dialog first
-            for (var i = 0; !dialogueText.IsPreLastParagraph(i); i++)
-            {
-                dialogueController.DisplayNextParagraph(dialogueText);
-                yield return WaitUntilSkipped();
-            }
-
             dialogueController.DisplayNextParagraph(dialogueText);
+            while (!dialogueController.isLastParagraph())
+            {
+                yield return WaitUntilSkipped();
+                dialogueController.DisplayNextParagraph(dialogueText);
+            }
             //Handle choices
             yield return choiceController.DisplayCards(choiceAndDialogue.FirstCardDto.cardDescription,
                 choiceAndDialogue.SecondCardDto.cardDescription);
@@ -94,21 +91,21 @@ namespace CrownDepth.Incidents
 
             if (dialogueText is DialogueTextWithReactions dialogueTextWithReactions)
             {
+                dialogueController.DisplayNextParagraph(dialogueText);
+                dialogueController.DisplayNextParagraph(dialogueText);
+                
                 var reactionText = DisplayReactionParagraphs(dialogueTextWithReactions);
-                for (var i = 0; reactionText.IsExists(i); i++)
-                {
-                    dialogueController.DisplayNextParagraph(reactionText);
-                    yield return WaitUntilSkipped();
-                }
-                //skip dialogue
                 dialogueController.DisplayNextParagraph(reactionText);
+                while(dialogueController.isActive()) {
+                    yield return WaitUntilSkipped();
+                    dialogueController.DisplayNextParagraph(reactionText);
+                }
             }
             else
             {
                 //Handle next replic
                 dialogueController.DisplayNextParagraph(dialogueText);
                 yield return WaitUntilSkipped();
-                
                 //skip dialogue
                 dialogueController.DisplayNextParagraph(dialogueText);
             }
