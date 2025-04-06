@@ -21,6 +21,7 @@ MonoBehaviour:
     Pride: 0
     Envy: 0
     Fury: 0
+    outrage: 0
   FirstCardDto:
     cardDescription: Choice me!!! I'm card 1.
     consequences:
@@ -29,6 +30,7 @@ MonoBehaviour:
       Pride: 33
       Envy: 0
       Fury: 0
+      outrage: 0
   SecondCardDto:
     cardDescription: Noooo. Choice me!!! I'm card 2
     consequences:
@@ -37,3 +39,4 @@ MonoBehaviour:
       Pride: 0
       Envy: 0
       Fury: 0
+      outrage: 0

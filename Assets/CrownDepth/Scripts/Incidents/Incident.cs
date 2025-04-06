@@ -5,6 +5,7 @@ using CrownDepth.Incidents.GameActions;
 using CrownDepth.Infrastructure;
 using CrownDepth.Limb;
 using CrownDepth.Paralax;
+using CrownDepth.Stat;
 using UnityEngine;
 using WyzalUtilities.Audio;
 

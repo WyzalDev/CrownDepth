@@ -20,7 +20,6 @@ namespace CrownDepth.Infrastructure
             _serviceLocator = new ServiceLocator();
             RegisterAllDependencies();
             Instance = this;
-            Debug.Log("SERVER_INFO: ServiceLocatorMono Awake");
         }
 
         public bool TryGetService<T>(out T service)
