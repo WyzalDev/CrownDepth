@@ -3,6 +3,7 @@ using System.Collections;
 using CrownDepth.Dialogue;
 using CrownDepth.Incidents.GameActions;
 using CrownDepth.Infrastructure;
+using CrownDepth.Paralax;
 using UnityEngine;
 using WyzalUtilities.Audio;
 
@@ -39,8 +40,13 @@ namespace CrownDepth.Incidents
             };
 
             yield return PlayStepsSound();
+            
+            if (ServiceLocatorMono.Instance.TryGetService<ParalaxNextStageChecker>(out var paralaxNextStageChecker))
+            {
+                yield return paralaxNextStageChecker.CheckNextStage();
+            }
+            
             yield return new WaitForSeconds(waitBetweenIncidents);
-
             EventManager.InvokeEndIncident();
         }
 

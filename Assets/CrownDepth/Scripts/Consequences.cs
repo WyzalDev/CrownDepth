@@ -1,5 +1,5 @@
 ﻿using System;
-using CrownDepth.Stats;
+using CrownDepth.Stat;
 using UnityEngine;
 
 namespace CrownDepth
@@ -15,12 +15,7 @@ namespace CrownDepth
 
         public void ApplyConsequences()
         {
-             Stats.Stats.ChangeStats(Greed, StatType.Greed);
-             Stats.Stats.ChangeStats(Gluttony, StatType.Gluttony);
-             Stats.Stats.ChangeStats(Pride, StatType.Pride);
-             Stats.Stats.ChangeStats(Envy, StatType.Envy);
-             Stats.Stats.ChangeStats(Fury, StatType.Fury);
-             
+             Stats.ChangeStats(Greed, Gluttony, Pride, Envy, Fury);
         }
     }
 }
