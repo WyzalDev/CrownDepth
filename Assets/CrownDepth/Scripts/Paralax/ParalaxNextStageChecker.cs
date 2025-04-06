@@ -9,7 +9,7 @@ namespace CrownDepth.Paralax
         [SerializeField] private ParalaxViewController paralaxController;
         [SerializeField] private float StageThreshold;
 
-        
+
         private float Greed;
         private float Gluttony;
         private float Pride;
@@ -22,50 +22,55 @@ namespace CrownDepth.Paralax
             var paralaxStageParam = Greed % StageThreshold;
             if (CheckParameter(Stats.Greed, Greed))
             {
-                if (Stats.Greed/StageThreshold > paralaxStageParam)
+                if (Stats.Greed / StageThreshold > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
+
                 Greed = Stats.Greed;
             }
-            
+
             paralaxStageParam = Gluttony % StageThreshold;
             if (CheckParameter(Stats.Gluttony, Gluttony))
             {
-                if (Stats.Gluttony % StageThreshold > paralaxStageParam)
+                if (Stats.Gluttony / StageThreshold > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
+
                 Gluttony = Stats.Gluttony;
             }
-            
+
             paralaxStageParam = Pride % StageThreshold;
             if (CheckParameter(Stats.Pride, Pride))
             {
-                if (Stats.Pride % StageThreshold > paralaxStageParam)
+                if (Stats.Pride / StageThreshold > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
+
                 Pride = Stats.Pride;
             }
-            
+
             paralaxStageParam = Envy % StageThreshold;
             if (CheckParameter(Stats.Envy, Envy))
             {
-                if (Stats.Envy % StageThreshold > paralaxStageParam)
+                if (Stats.Envy / StageThreshold > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
+
                 Envy = Stats.Envy;
             }
-            
+
             paralaxStageParam = Fury % StageThreshold;
             if (CheckParameter(Stats.Fury, Fury))
             {
-                if (Stats.Fury % StageThreshold > paralaxStageParam)
+                if (Stats.Fury / StageThreshold > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
+
                 Fury = Stats.Fury;
             }
         }
@@ -83,7 +88,7 @@ namespace CrownDepth.Paralax
         {
             return currentParam > paralaxParam;
         }
-        
+
         private IEnumerator ApplyNextStage()
         {
             SetStats();

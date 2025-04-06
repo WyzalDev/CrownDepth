@@ -66,7 +66,6 @@ namespace CrownDepth.Incidents
                 dialogueController.DisplayNextParagraph(dialogueText);
             }
 
-
             dialogueAction.consequence.ApplyConsequences();
         }
 
