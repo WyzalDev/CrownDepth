@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TutorialChoice
   m_EditorClassIdentifier: 
   actionType: 1
-  dialogueText: {fileID: 11400000, guid: 0c812a38c1d535f43ad0fb6fdd211db8, type: 2}
+  dialogueText: {fileID: 11400000, guid: 924d820e9d360ac49aaac7d64f2f568c, type: 2}
   npcType: 0
   consequence:
     Greed: 0

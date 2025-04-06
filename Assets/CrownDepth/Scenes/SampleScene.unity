@@ -661,7 +661,11 @@ MonoBehaviour:
     action: {fileID: 11400000, guid: a956fc3138e0f5a4ca2d2256da067639, type: 2}
     npcType: 0
     waitBetweenIncidents: 0.5
-  currentIncidentIndex: 0
+  - name: third Incident
+    action: {fileID: 11400000, guid: a956fc3138e0f5a4ca2d2256da067639, type: 2}
+    npcType: 0
+    waitBetweenIncidents: 0.5
+  currentIncidentIndex: 1
 --- !u!224 &1140572350 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3929458576797085818, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
@@ -1405,7 +1409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1027752777367671979, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3081397119821713996, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1571,6 +1575,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4894502474821955938, guid: f541d4d60bd387f46a6324b6625d4087, type: 3}
+    - target: {fileID: 4223734441575837809, guid: 46c21b4a4eef0254fb65737bbacd47b3, type: 3}
+      propertyPath: typeSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7261363694166542104, guid: 46c21b4a4eef0254fb65737bbacd47b3, type: 3}
       propertyPath: m_Name
       value: Photo

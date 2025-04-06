@@ -91,9 +91,10 @@ namespace CrownDepth.Incidents
 
             if (dialogueText is DialogueTextWithReactions dialogueTextWithReactions)
             {
-                dialogueController.DisplayNextParagraph(dialogueText);
-                dialogueController.DisplayNextParagraph(dialogueText);
-                
+                while (dialogueController.isActive())
+                {
+                    dialogueController.DisplayNextParagraph(dialogueText);
+                }
                 var reactionText = DisplayReactionParagraphs(dialogueTextWithReactions);
                 dialogueController.DisplayNextParagraph(reactionText);
                 while(dialogueController.isActive()) {
