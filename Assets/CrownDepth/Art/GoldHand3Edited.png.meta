@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 2fabf6150e0a0af48bd0f9def5563841
+guid: 9d974a188bd94f44a8164601cc8df51c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5752415826400172066
-    second: Eyes1_0
+      213: -5450103714985692183
+    second: GoldHand3Edited_0
+  - first:
+      213: -5207286357856623317
+    second: GoldHand3Edited_1
+  - first:
+      213: -4054995572269857156
+    second: GoldHand3Edited_2
+  - first:
+      213: 6257327955216372649
+    second: GoldHand3Edited_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +81,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 64
+    maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Eyes1_0
+      name: GoldHand3Edited_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 25
-        height: 4
+        x: 88
+        y: 142
+        width: 47
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ed7251398405b20b0800000000000000
-      internalID: -5752415826400172066
+      spriteID: 9e3bd3f0c875d54b0800000000000000
+      internalID: -5450103714985692183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldHand3Edited_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 139
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25e73c95a00cb7b0800000000000000
+      internalID: -5207286357856623317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldHand3Edited_2
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 102
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c76c215e203c9b7c0800000000000000
+      internalID: -4054995572269857156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GoldHand3Edited_3
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 106
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a31bcd5f9e76d650800000000000000
+      internalID: 6257327955216372649
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Eyes1_0: -5752415826400172066
+      GoldHand3Edited_0: -5450103714985692183
+      GoldHand3Edited_1: -5207286357856623317
+      GoldHand3Edited_2: -4054995572269857156
+      GoldHand3Edited_3: 6257327955216372649
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,76 +1,61 @@
-﻿using System.Collections;
+﻿using System;
 using CrownDepth.Stat;
 using UnityEngine;
 
-namespace CrownDepth.Paralax
+namespace CrownDepth.Limb
 {
-    public class ParalaxNextStageChecker : MonoBehaviour
+    public class LimbsStageChecker : MonoBehaviour
     {
-        [SerializeField] private ParalaxViewController paralaxController;
-
         private float Greed = 0;
         private float Gluttony = 0;
         private float Pride = 0;
         private float Envy = 0;
         private float Fury = 0;
 
-
-        public IEnumerator CheckNextStage()
+        public LimbType CheckLimbsStage()
         {
+            LimbType resultLimbs = LimbType.None;
+
             var paralaxStageParam = Greed / Stats.STAT_THRESHOLD;
             if (CheckParameter(Stats.Greed, Greed))
             {
                 if (Stats.Greed / Stats.STAT_THRESHOLD > paralaxStageParam)
                 {
-                    yield return ApplyNextStage();
+                    Greed = Stats.Greed;
+                    resultLimbs = LimbType.RightArm;
                 }
-
-                Greed = Stats.Greed;
             }
 
             paralaxStageParam = Gluttony / Stats.STAT_THRESHOLD;
-            if (CheckParameter(Stats.Gluttony, Gluttony))
+            if (Stats.Gluttony / Stats.STAT_THRESHOLD > paralaxStageParam)
             {
-                if (Stats.Gluttony / Stats.STAT_THRESHOLD > paralaxStageParam)
-                {
-                    yield return ApplyNextStage();
-                }
-
                 Gluttony = Stats.Gluttony;
+                resultLimbs |= LimbType.Body;
             }
-
+            
             paralaxStageParam = Pride / Stats.STAT_THRESHOLD;
-            if (CheckParameter(Stats.Pride, Pride))
+            if (Stats.Pride / Stats.STAT_THRESHOLD > paralaxStageParam)
             {
-                if (Stats.Pride / Stats.STAT_THRESHOLD > paralaxStageParam)
-                {
-                    yield return ApplyNextStage();
-                }
-
                 Pride = Stats.Pride;
+                resultLimbs |= LimbType.Horns;
             }
-
+            
             paralaxStageParam = Envy / Stats.STAT_THRESHOLD;
-            if (CheckParameter(Stats.Envy, Envy))
+            if (Stats.Envy / Stats.STAT_THRESHOLD > paralaxStageParam)
             {
-                if (Stats.Envy / Stats.STAT_THRESHOLD > paralaxStageParam)
-                {
-                    yield return ApplyNextStage();
-                }
-
                 Envy = Stats.Envy;
+                resultLimbs |= LimbType.LeftArm;
             }
-
+            
             paralaxStageParam = Fury / Stats.STAT_THRESHOLD;
-            if (CheckParameter(Stats.Fury, Fury))
+            if (Stats.Fury / Stats.STAT_THRESHOLD > paralaxStageParam)
             {
-                if (Stats.Fury / Stats.STAT_THRESHOLD > paralaxStageParam)
-                {
-                    yield return ApplyNextStage();
-                }
-
                 Fury = Stats.Fury;
+                resultLimbs |= LimbType.Face;
             }
+            
+            SetStats();
+            return resultLimbs;
         }
 
         private void SetStats()
@@ -86,11 +71,16 @@ namespace CrownDepth.Paralax
         {
             return currentParam > paralaxParam;
         }
+    }
 
-        private IEnumerator ApplyNextStage()
-        {
-            SetStats();
-            yield return paralaxController.NextStage();
-        }
+    [Flags]
+    public enum LimbType
+    {
+        None = 0,
+        RightArm = 1,
+        LeftArm = 2,
+        Body = 4,
+        Horns = 8,
+        Face = 16
     }
 }

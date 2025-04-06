@@ -25,8 +25,8 @@ MonoBehaviour:
     cardDescription: Choice me!!! I'm card 1.
     consequences:
       Greed: 0
-      Gluttony: 33
-      Pride: 0
+      Gluttony: 0
+      Pride: 33
       Envy: 0
       Fury: 0
   SecondCardDto:

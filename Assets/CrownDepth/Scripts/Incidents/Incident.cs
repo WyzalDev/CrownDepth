@@ -3,6 +3,7 @@ using System.Collections;
 using CrownDepth.Dialogue;
 using CrownDepth.Incidents.GameActions;
 using CrownDepth.Infrastructure;
+using CrownDepth.Limb;
 using CrownDepth.Paralax;
 using UnityEngine;
 using WyzalUtilities.Audio;
@@ -67,6 +68,7 @@ namespace CrownDepth.Incidents
             }
 
             dialogueAction.consequence.ApplyConsequences();
+            TryGrowLimbs();
         }
 
         private IEnumerator ExecuteChoiceAndDialogue(GameAction action)
@@ -92,6 +94,7 @@ namespace CrownDepth.Incidents
                 choiceAndDialogue.SecondCardDto.cardDescription);
             yield return WaitUntilChoices();
             ApplyChoosenCardConsequences(choiceAndDialogue);
+            TryGrowLimbs();
             yield return choiceController.RemoveCards(choosenCard);
 
             if (dialogueText is DialogueTextWithReactions dialogueTextWithReactions)
@@ -118,6 +121,15 @@ namespace CrownDepth.Incidents
 
             //apply dialogue consequences
             choiceAndDialogue.consequence.ApplyConsequences();
+            TryGrowLimbs();
+        }
+
+        private void TryGrowLimbs()
+        {
+            if (ServiceLocatorMono.Instance.TryGetService<LimbsViewController>(out var limbsViewController))
+            {
+                limbsViewController.TryGrowLimbs();
+            }
         }
 
         private DialogueText DisplayReactionParagraphs(DialogueTextWithReactions dialogueTextWithReactions)

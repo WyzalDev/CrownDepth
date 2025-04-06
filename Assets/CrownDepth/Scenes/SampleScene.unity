@@ -151,6 +151,7 @@ MonoBehaviour:
   dialogueController: {fileID: 7979800936734281872}
   choiceUIController: {fileID: 7543153433731566305}
   paralaxNextStageChecker: {fileID: 1030497447}
+  limbsViewController: {fileID: 7193046603272734462}
 --- !u!4 &76105985
 Transform:
   m_ObjectHideFlags: 0
@@ -1397,50 +1398,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5785168042335807360, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9154525341871802489, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1526,6 +1483,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
+--- !u!114 &7193046603272734462 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8750774379367056533, guid: 1b374692bcc138f49930b212d72ed2fc, type: 3}
+  m_PrefabInstance: {fileID: 7193046603272734461}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e2e075f3c44fcab5ae6b56ac8def6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7543153433731566304
 PrefabInstance:
   m_ObjectHideFlags: 0

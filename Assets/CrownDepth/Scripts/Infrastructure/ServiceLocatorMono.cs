@@ -1,4 +1,5 @@
 ﻿using CrownDepth.Dialogue;
+using CrownDepth.Limb;
 using CrownDepth.Paralax;
 using UnityEngine;
 
@@ -35,6 +36,8 @@ namespace CrownDepth.Infrastructure
         [SerializeField] private ChoiceUIController choiceUIController;
         
         [SerializeField] private ParalaxNextStageChecker paralaxNextStageChecker;
+        
+        [SerializeField] private LimbsViewController limbsViewController;
 
 
         //Register all server services and entities here 
@@ -51,6 +54,7 @@ namespace CrownDepth.Infrastructure
             _serviceLocator.Register<DialogueController>(dialogueController);
             _serviceLocator.Register<ChoiceUIController>(choiceUIController);
             _serviceLocator.Register<ParalaxNextStageChecker>(paralaxNextStageChecker);
+            _serviceLocator.Register<LimbsViewController>(limbsViewController);
         }
 
         #endregion

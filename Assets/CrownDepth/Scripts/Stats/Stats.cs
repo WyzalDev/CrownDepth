@@ -11,6 +11,8 @@ namespace CrownDepth.Stat
         public static float Fury;
 
         private const float MAX_STAT_POINT = 100;
+        
+        public const float STAT_THRESHOLD = 33;
 
         public static void ChangeStats(float greed, float gluttony, float pride, float envy, float fury)
         {
