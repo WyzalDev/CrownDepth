@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mage3nobeard_0: -7829785374710553743
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
