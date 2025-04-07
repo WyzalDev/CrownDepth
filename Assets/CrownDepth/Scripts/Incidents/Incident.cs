@@ -18,7 +18,7 @@ namespace CrownDepth.Incidents
         [SerializeField] private string name;
         [SerializeField] private GameAction action;
         [SerializeField] private NPCType npcType;
-        [SerializeField] private float waitBetweenIncidents;
+        private float waitBetweenIncidents = 0.5f;
 
         private static bool isSkipped = false;
 
