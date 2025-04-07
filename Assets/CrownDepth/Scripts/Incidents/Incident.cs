@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using CrownDepth.Dialogue;
 using CrownDepth.Incidents.GameActions;
 using CrownDepth.Infrastructure;
@@ -28,6 +29,8 @@ namespace CrownDepth.Incidents
         private static bool canBeChoosen = false;
 
         private static ChoosenCard choosenCard = ChoosenCard.One;
+
+        private const string CLICK_SOUND = "Click";
 
         public IEnumerator Execute()
         {
@@ -59,6 +62,7 @@ namespace CrownDepth.Incidents
             var dialogueAction = action as DialogueGameAction;
             if (dialogueAction == null) yield break;
             if (!ServiceLocatorMono.Instance.TryGetService<DialogueController>(out var dialogueController)) yield break;
+            ChangeAvatar(npcType, dialogueController);
 
             var dialogueText = dialogueAction.dialogueText;
 
@@ -79,6 +83,7 @@ namespace CrownDepth.Incidents
             if (choiceAndDialogue == null) yield break;
             if (!ServiceLocatorMono.Instance.TryGetService<DialogueController>(out var dialogueController)) yield break;
             if (!ServiceLocatorMono.Instance.TryGetService<ChoiceUIController>(out var choiceController)) yield break;
+            ChangeAvatar(npcType, dialogueController);
 
             var dialogueText = choiceAndDialogue.dialogueText;
 
@@ -123,6 +128,12 @@ namespace CrownDepth.Incidents
             //apply dialogue consequences
             choiceAndDialogue.consequence.ApplyConsequences();
             TryGrowLimbs();
+        }
+
+        private void ChangeAvatar(NPCType npcType, DialogueController dialogueController)
+        {
+            dialogueController.ChangeAvatar(npcType);
+
         }
 
         private void TryGrowLimbs()
@@ -187,6 +198,7 @@ namespace CrownDepth.Incidents
 
         public static void Skip()
         {
+            AudioContext.PlayGlobalSfx(CLICK_SOUND);
             if (canBeSkipped)
                 isSkipped = true;
         }
@@ -210,7 +222,25 @@ namespace CrownDepth.Incidents
 
     public enum NPCType
     {
-        Citizen,
-        Demon
+        BlueMage,
+        RedMage,
+        GreenMage,
+        PurpleMage,
+        YellowMage,
+        WhiteMage,
+        WhiteNoble,
+        RedNoble,
+        PeasantWhiteM,
+        PeasantGrayM,
+        PeasantWhiteW,
+        PeasantGrayW,
+        Demon,
+        Executioner,
+        Monk,
+        BurnedMonk,
+        ChildBrownW,
+        ChildBlondM,
+        ChildBlondW,
+        ChildBrownM
     }
 }

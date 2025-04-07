@@ -1,13 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using CrownDepth.Incidents;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CrownDepth.Dialogue
 {
     public class DialogueController : MonoBehaviour
     {
+        [SerializeField] public List<NpcAvatar> npcAvatars;
+        
+        [SerializeField] public Image _avatarImage;
+        
         [SerializeField] private TextMeshProUGUI npcNameText;
 
         [SerializeField] private TextMeshProUGUI npcDialogueText;
@@ -83,6 +90,11 @@ namespace CrownDepth.Dialogue
             return _paragraphs.Count == 1;
         }
 
+        public void ChangeAvatar(NPCType npcType)
+        {
+            _avatarImage.sprite = npcAvatars.First(x => x.npcType == npcType).npcAvatar;
+        }
+
         private void StartConversation(DialogueText dialogue)
         {
             //activate dialogue box
@@ -141,5 +153,12 @@ namespace CrownDepth.Dialogue
             //update _isTyping bool
             _isTyping = false;
         }
+    }
+
+    [Serializable]
+    public class NpcAvatar
+    {
+        [SerializeField] public Sprite npcAvatar;
+        [SerializeField] public NPCType npcType;
     }
 }

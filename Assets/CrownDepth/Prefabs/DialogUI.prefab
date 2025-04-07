@@ -354,7 +354,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.25
+  m_fontSize: 18.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -450,9 +450,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a4d77f76294d949b455e80b8d9e142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _avatarImage: {fileID: 3479863117439828232}
   npcNameText: {fileID: 2869967054904780828}
   npcDialogueText: {fileID: 7885713507803782631}
-  typeSpeed: 10
+  typeSpeed: 4
 --- !u!1 &8422245359205026357
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +547,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.3
+  m_fontSize: 24.4
   m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 1

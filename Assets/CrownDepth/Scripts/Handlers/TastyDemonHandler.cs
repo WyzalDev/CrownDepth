@@ -3,6 +3,7 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using WyzalUtilities.Audio;
 
 namespace CrownDepth.Handlers
 {
@@ -21,6 +22,7 @@ namespace CrownDepth.Handlers
         [SerializeField] private Vector2 displayPosAnchorMax;
 
         private WaitForSeconds cachedWait;
+        private const string TOASTY_SOUND = "ToastyDemon";
         
         private void Start()
         {
@@ -42,7 +44,8 @@ namespace CrownDepth.Handlers
             yield return displaySequence.Append(_demonImage.rectTransform.DOAnchorMin(displayPosAnchorMin, inOrOutDuration).SetEase(ease))
                 .Join(_demonImage.rectTransform.DOAnchorMax(displayPosAnchorMax, inOrOutDuration).SetEase(ease))
                 .WaitForCompletion();
-
+            
+            AudioContext.PlayGlobalSfx(TOASTY_SOUND);
             yield return cachedWait;
             
             var hideSequence = DOTween.Sequence();

@@ -3,6 +3,7 @@ using CrownDepth.Incidents;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using WyzalUtilities.Audio;
 
 namespace CrownDepth
 {
@@ -16,8 +17,12 @@ namespace CrownDepth
         [SerializeField] private Button choiceButtonTwo;
         [SerializeField] private TMP_Text choiceButtonTwoText;
 
+        private const string CHOOSE_CARD_SOUND = "CardChoosed";
+        private const string DISPLAY_CARD_SOUND = "DisplayCard";
+
         public IEnumerator DisplayCards(string cardOneText, string cardTwoText)
         {
+            AudioContext.PlayGlobalSfx(DISPLAY_CARD_SOUND);
             choiceButtonOneText.text = cardOneText;
             choiceButtonTwoText.text = cardTwoText;
             gameObject.SetActive(true);
@@ -39,11 +44,13 @@ namespace CrownDepth
 
         public void ChoiceCardOne()
         {
+            AudioContext.PlayGlobalSfx(CHOOSE_CARD_SOUND);
             Incident.Choose(ChoosenCard.One);
         }
 
         public void ChoiceCardTwo()
         {
+            AudioContext.PlayGlobalSfx(CHOOSE_CARD_SOUND);
             Incident.Choose(ChoosenCard.Two);
         }
     }

@@ -38,3 +38,21 @@ MonoBehaviour:
   - name: steps
     volume: 0.5
     clip: {fileID: 8300000, guid: 47cfb19b1f0df3c4196965b7b2db23c0, type: 3}
+  - name: MoveParalax
+    volume: 0.5
+    clip: {fileID: 8300000, guid: f0c160e9bf7cbcb4797be086f3189f90, type: 3}
+  - name: Click
+    volume: 0.5
+    clip: {fileID: 8300000, guid: 482da8662f2a33942a74e59a6d71dde2, type: 3}
+  - name: CardChoosed
+    volume: 0.25
+    clip: {fileID: 8300000, guid: 7c5a7e3a1c15b9e41aeb61e518adb770, type: 3}
+  - name: LimbGrow
+    volume: 0.5
+    clip: {fileID: 8300000, guid: 08506034886d648489da8e44287ce0ad, type: 3}
+  - name: DisplayCard
+    volume: 0.5
+    clip: {fileID: 8300000, guid: b0c2a37d32ee0144ba1fdfca039e7b60, type: 3}
+  - name: ToastyDemon
+    volume: 1
+    clip: {fileID: 8300000, guid: bec7b29696e206c4c88c265ff6b1451e, type: 3}

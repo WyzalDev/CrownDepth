@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using WyzalUtilities.Audio;
 
 namespace CrownDepth.Limb
 {
@@ -62,6 +63,8 @@ namespace CrownDepth.Limb
 
         private const int MAX_LIMB_STAGES = 3;
         
+        private const string LIMB_GROW_SOUND = "LimbGrow";
+        
         public void ResetStages()
         {
             CurrentStage = 0;
@@ -73,6 +76,7 @@ namespace CrownDepth.Limb
         public void ActivateNextStage()
         {
             if(CurrentStage >= MAX_LIMB_STAGES) return;
+            AudioContext.PlayGlobalSfx(LIMB_GROW_SOUND);
             CurrentStage++;
             switch (CurrentStage)
             {

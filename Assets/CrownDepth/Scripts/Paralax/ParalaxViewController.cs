@@ -4,6 +4,7 @@ using CrownDepth;
 using CrownDepth.Stat;
 using DG.Tweening;
 using UnityEngine;
+using WyzalUtilities.Audio;
 
 public class ParalaxViewController : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class ParalaxViewController : MonoBehaviour
     [SerializeField] private AnchorsData _stageFour;
     [SerializeField] private AnchorsData _stageFive;
     private const int MAX_STAGES = 5;
+    private const string ParalaxMoveSoundName = "MoveParalax";
     
     private int currentStage = 1;
 
@@ -29,6 +31,7 @@ public class ParalaxViewController : MonoBehaviour
             yield break;
         }
         currentStage++;
+        AudioContext.PlayGlobalSfx(ParalaxMoveSoundName);
         yield return MoveParalax();
     }
 
