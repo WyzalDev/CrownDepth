@@ -4449,6 +4449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainPanel: {fileID: 464256890}
+  restartButton: {fileID: 1864665812}
 --- !u!1 &1886874650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4631,7 +4632,7 @@ MonoBehaviour:
   ScoreCounterElement: {fileID: 1907561555}
   ScoreText: {fileID: 1168851363}
   counterAnimationDuration: 0.2
-  waitBetweenStatisticsElements: 0.5
+  waitBetweenStatisticsElements: 0.6
   startSizeOfAnimatedElements: 1
   animationEase: 17
   RestartRect: {fileID: 1890549901}

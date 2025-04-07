@@ -74,7 +74,7 @@ public class GameEndController : MonoBehaviour
         
         var cachedWait = new WaitForSeconds(waitBetweenStatisticsElements);
 
-        yield return AudioContext.TurnOnSource();
+        yield return AudioContext.TurnOnSource(0.1f);
 
         var fadeSettings = new FadeSettings()
         {

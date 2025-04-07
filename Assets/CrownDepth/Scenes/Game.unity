@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _globalFade: {fileID: 50946013}
-  _fadeDuration: 2.5
+  _fadeDuration: 1.5
   _fadeEase: 13
 --- !u!1 &1740615961
 GameObject:

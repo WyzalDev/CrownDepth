@@ -2,6 +2,7 @@
 using CrownDepth.SceneManagement;
 using CrownDepth.Stat;
 using UnityEngine;
+using UnityEngine.UI;
 using WyzalUtilities.Audio;
 
 namespace CrownDepth
@@ -9,16 +10,19 @@ namespace CrownDepth
     public class RestartButton : MonoBehaviour
     {
         [SerializeField] private RectTransform mainPanel;
+        [SerializeField] private Button restartButton;
         
         public void Restart()
         {
-            mainPanel.gameObject.SetActive(false);
+            
             StartCoroutine(RestartCoroutine());
         }
 
         private IEnumerator RestartCoroutine()
         {
-            yield return AudioContext.TurnOffGlobalSounds(1.25f);
+            restartButton.interactable = false;
+            yield return AudioContext.TurnOffGlobalSounds(1f);
+            mainPanel.gameObject.SetActive(false);
             Stats.ResetStats();
             SceneLoader.LoadScene(SceneName.Game);
         }
