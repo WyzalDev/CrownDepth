@@ -11,7 +11,6 @@ namespace CrownDepth.Incidents
     {
         [SerializeField] private List<Incident> _incidents;
         [SerializeField] private int currentIncidentIndex = 0;
-        [SerializeField] private string firstStageMusicName;
 
         private void Start()
         {
@@ -22,7 +21,12 @@ namespace CrownDepth.Incidents
         
         private IEnumerator ExecuteIncidents()
         {
+            AudioContext.ClearMusic();
             yield return AudioContext.TurnOnSource(0.2f);
+            
+            //play first stage music
+            AudioContext.PlayGlobalMusic("Hills");
+            
             //Play cycle
             while (_incidents.Count() > currentIncidentIndex)
             {

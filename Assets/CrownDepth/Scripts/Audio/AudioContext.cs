@@ -87,19 +87,40 @@ namespace WyzalUtilities.Audio
         {
             yield return Instance.TurnOffSoundSource(duration);
         }
+        
+        public static IEnumerator TurnOffGlobalMusic(float duration = fadeDuration)
+        {
+            yield return Instance.TurnOffMusicSource(duration);
+        }
 
         public static IEnumerator TurnOnSource(float duration = fadeDuration)
         {
             yield return Instance.TurnOnGlobalSource(duration);
         }
+
+        public static void ClearMusic()
+        {
+            Instance.ClearGlobalMusic();
+        }
         #endregion
 
         #region Private Methods
+        private void ClearGlobalMusic()
+        {
+            globalMusicAudioSource.clip = null;
+        }
         private IEnumerator TurnOnGlobalSource(float duration, Ease easeType = Ease.InOutQuart)
         {
             var sequence = DOTween.Sequence();
             yield return sequence.Append(globalMusicAudioSource.DOFade(1f, duration).SetEase(easeType))
                 .Join(globalSfxAudioSource.DOFade(1f, duration).SetEase(easeType))
+                .WaitForCompletion();
+        }
+        
+        private IEnumerator TurnOffMusicSource(float duration, Ease easeType = Ease.InOutQuart)
+        {
+            var sequence = DOTween.Sequence();
+            yield return sequence.Append(globalMusicAudioSource.DOFade(0f, duration).SetEase(easeType))
                 .WaitForCompletion();
         }
 

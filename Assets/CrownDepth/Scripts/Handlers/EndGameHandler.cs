@@ -7,6 +7,7 @@ using CrownDepth.SceneManagement;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+using WyzalUtilities.Audio;
 
 namespace CrownDepth.Handlers
 {
@@ -30,6 +31,9 @@ namespace CrownDepth.Handlers
             _globalFade.gameObject.SetActive(true);
             
             //ToDo fade screen and audio
+            _globalFade.DOFade(1f, _fadeDuration).SetEase(_fadeEase);
+            yield return AudioContext.TurnOffGlobalSounds();
+            AudioContext.ClearMusic();
             
             EventManager.InvokeResetGameScene();
             

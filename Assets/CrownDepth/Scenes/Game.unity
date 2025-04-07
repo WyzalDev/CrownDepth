@@ -900,7 +900,6 @@ MonoBehaviour:
     npcType: 0
     waitBetweenIncidents: 0.5
   currentIncidentIndex: 0
-  firstStageMusicName: 
 --- !u!224 &1140572350 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3929458576797085818, guid: b20d91b0571cc6849941bb1199c15748, type: 3}

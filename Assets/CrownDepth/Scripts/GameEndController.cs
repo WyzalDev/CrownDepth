@@ -62,7 +62,7 @@ public class GameEndController : MonoBehaviour
                 TitleText.text = LooseTitleText;
                 break;
         }
-
+        
         CountAmount();
         SetStats();
         SetDignity();
@@ -71,9 +71,29 @@ public class GameEndController : MonoBehaviour
     
     private IEnumerator EndGameStatsListAnimation()
     {
-        var cachedWait = new WaitForSeconds(waitBetweenStatisticsElements);
         
-        yield return cachedWait;
+        var cachedWait = new WaitForSeconds(waitBetweenStatisticsElements);
+
+        yield return AudioContext.TurnOnSource();
+
+        var fadeSettings = new FadeSettings()
+        {
+            durationIn = 1.25f,
+            durationOut = 1.25f,
+            easeIn = Ease.InQuart,
+            easeOut = Ease.OutQuart
+        };
+        
+        switch (EndGame.EndGameType)
+        {
+            case EndGameType.Win:
+                yield return AudioContext.PlayGlobalMusic("Win", fadeSettings).WaitForCompletion();
+                break;
+            default:
+                yield return AudioContext.PlayGlobalMusic("Lose", fadeSettings).WaitForCompletion();
+                break;
+        }
+        
         MainPanel.gameObject.SetActive(true);
         yield return cachedWait;
         

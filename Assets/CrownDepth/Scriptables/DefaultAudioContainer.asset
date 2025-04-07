@@ -12,7 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d0111bfc3c44ce805b0f49f2838b65, type: 3}
   m_Name: DefaultAudioContainer
   m_EditorClassIdentifier: 
-  musicSounds: []
+  musicSounds:
+  - name: Hills
+    volume: 1
+    clip: {fileID: 8300000, guid: 4ab6acaf1550b4e4784695a0f28a4bc0, type: 3}
+  - name: UnderGround
+    volume: 1
+    clip: {fileID: 8300000, guid: 5dc7fd78820084a4ca1e1a92cdd93f27, type: 3}
+  - name: Caves
+    volume: 1
+    clip: {fileID: 8300000, guid: f7b1db511acc0d14b8494338a016f597, type: 3}
+  - name: Abyss
+    volume: 1
+    clip: {fileID: 8300000, guid: d79b958971a012345904bd74a19aaa3c, type: 3}
+  - name: Hell
+    volume: 1
+    clip: {fileID: 8300000, guid: a807559fbdc80184898feda4cd1e60ad, type: 3}
+  - name: Win
+    volume: 1
+    clip: {fileID: 8300000, guid: 9362478fb2f5fcb498f86cea3bd92416, type: 3}
+  - name: Lose
+    volume: 1
+    clip: {fileID: 8300000, guid: 1c23d06ad6a9eca4ead7ffcdc30682db, type: 3}
   sfxSounds:
   - name: steps
     volume: 0.5
