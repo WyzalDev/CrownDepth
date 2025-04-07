@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3332083613a34715a605159e84e3cdfb, type: 3}
   m_Name: Incident3
   m_EditorClassIdentifier: 
-  actionType: 0
-  dialogueText: {fileID: 0}
+  actionType: 1
+  dialogueText: {fileID: 11400000, guid: 32469c3921462d54cb4f093e38650a95, type: 2}
   npcType: 0
   consequence:
     Greed: 0
@@ -23,20 +23,20 @@ MonoBehaviour:
     Fury: 0
     outrage: 0
   FirstCardDto:
-    cardDescription: 
+    cardDescription: Send a doctor and ointments at the expense of the treasury.
     consequences:
       Greed: 0
-      Gluttony: 0
+      Gluttony: 5
       Pride: 0
       Envy: 0
       Fury: 0
       outrage: 0
   SecondCardDto:
-    cardDescription: 
+    cardDescription: We have no funds. Let them pray
     consequences:
-      Greed: 0
+      Greed: 5
       Gluttony: 0
-      Pride: 0
+      Pride: 10
       Envy: 0
       Fury: 0
       outrage: 0

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3332083613a34715a605159e84e3cdfb, type: 3}
   m_Name: Incident1
   m_EditorClassIdentifier: 
-  actionType: 0
-  dialogueText: {fileID: 0}
+  actionType: 1
+  dialogueText: {fileID: 11400000, guid: b47b72948c6e4ba49a5a9c3a71466ec0, type: 2}
   npcType: 0
   consequence:
     Greed: 0
@@ -23,20 +23,20 @@ MonoBehaviour:
     Fury: 0
     outrage: 0
   FirstCardDto:
-    cardDescription: 
+    cardDescription: Perform ritual. This benefit for everybody.
     consequences:
-      Greed: 0
+      Greed: 1
       Gluttony: 0
-      Pride: 0
+      Pride: 1
       Envy: 0
       Fury: 0
       outrage: 0
   SecondCardDto:
-    cardDescription: 
+    cardDescription: No one will die for the harvest. Find another way
     consequences:
       Greed: 0
       Gluttony: 0
       Pride: 0
-      Envy: 0
+      Envy: 1
       Fury: 0
       outrage: 0

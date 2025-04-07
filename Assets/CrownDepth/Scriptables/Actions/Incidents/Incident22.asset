@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3332083613a34715a605159e84e3cdfb, type: 3}
   m_Name: Incident22
   m_EditorClassIdentifier: 
-  actionType: 0
-  dialogueText: {fileID: 0}
+  actionType: 1
+  dialogueText: {fileID: 11400000, guid: 25c4529561ebdd84aa00d3dc7a17827e, type: 2}
   npcType: 0
   consequence:
     Greed: 0
@@ -23,19 +23,19 @@ MonoBehaviour:
     Fury: 0
     outrage: 0
   FirstCardDto:
-    cardDescription: 
+    cardDescription: Take the sword for yourself
     consequences:
       Greed: 0
       Gluttony: 0
-      Pride: 0
+      Pride: 1
       Envy: 0
-      Fury: 0
+      Fury: 1
       outrage: 0
   SecondCardDto:
-    cardDescription: 
+    cardDescription: Melt the sword in the temple fire
     consequences:
       Greed: 0
-      Gluttony: 0
+      Gluttony: 1
       Pride: 0
       Envy: 0
       Fury: 0

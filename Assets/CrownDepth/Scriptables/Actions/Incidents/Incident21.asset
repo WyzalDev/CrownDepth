@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3332083613a34715a605159e84e3cdfb, type: 3}
   m_Name: Incident21
   m_EditorClassIdentifier: 
-  actionType: 0
-  dialogueText: {fileID: 0}
+  actionType: 1
+  dialogueText: {fileID: 11400000, guid: 83572ae408e1855429144c5a4436ba98, type: 2}
   npcType: 0
   consequence:
     Greed: 0
@@ -23,20 +23,20 @@ MonoBehaviour:
     Fury: 0
     outrage: 0
   FirstCardDto:
-    cardDescription: 
+    cardDescription: Order to bring all the buckets and drink water
     consequences:
       Greed: 0
-      Gluttony: 0
-      Pride: 0
+      Gluttony: 1
+      Pride: 1
       Envy: 0
       Fury: 0
       outrage: 0
   SecondCardDto:
-    cardDescription: 
+    cardDescription: Forbid talking about it and exile the old woman
     consequences:
       Greed: 0
       Gluttony: 0
       Pride: 0
       Envy: 0
-      Fury: 0
+      Fury: 1
       outrage: 0

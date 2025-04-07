@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8634817394bf4778a2585c1be356e3ee, type: 3}
   m_Name: Dialogue7
   m_EditorClassIdentifier: 
-  speakerName: 
-  paragraphs: []
-  reactionOnFirstCard: []
-  reactionOnSecondCard: []
+  speakerName: Citizen soldier
+  paragraphs:
+  - I'm tired of killing for you.
+  - Let me go in peace.
+  - Empty
+  reactionOnFirstCard:
+  - You didn't kill me. You killed the hope of other soldiers.
+  reactionOnSecondCard:
+  - Your mercy will weaken discipline, my lord.

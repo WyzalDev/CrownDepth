@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3332083613a34715a605159e84e3cdfb, type: 3}
   m_Name: Incident11
   m_EditorClassIdentifier: 
-  actionType: 0
-  dialogueText: {fileID: 0}
+  actionType: 1
+  dialogueText: {fileID: 11400000, guid: d167e590518d85c4484951ecd7971bbe, type: 2}
   npcType: 0
   consequence:
     Greed: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
     Fury: 0
     outrage: 0
   FirstCardDto:
-    cardDescription: 
+    cardDescription: Give him gold. Better to play it safe
     consequences:
       Greed: 0
       Gluttony: 0
@@ -32,11 +32,11 @@ MonoBehaviour:
       Fury: 0
       outrage: 0
   SecondCardDto:
-    cardDescription: 
+    cardDescription: Execute the thief along with the child
     consequences:
-      Greed: 0
+      Greed: 5
       Gluttony: 0
       Pride: 0
       Envy: 0
-      Fury: 0
+      Fury: 15
       outrage: 0

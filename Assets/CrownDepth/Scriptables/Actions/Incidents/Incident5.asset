@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Incident5
   m_EditorClassIdentifier: 
   actionType: 1
-  dialogueText: {fileID: 0}
+  dialogueText: {fileID: 11400000, guid: a0bb4c06bf1967e4f852c49baee8a957, type: 2}
   npcType: 0
   consequence:
     Greed: 0
@@ -23,20 +23,20 @@ MonoBehaviour:
     Fury: 0
     outrage: 0
   FirstCardDto:
-    cardDescription: 
+    cardDescription: Approve torture. Truth requires sacrifice.
     consequences:
       Greed: 0
       Gluttony: 0
       Pride: 0
       Envy: 0
-      Fury: 0
+      Fury: 10
       outrage: 0
   SecondCardDto:
-    cardDescription: 
+    cardDescription: Don't touch the know - they are too influential
     consequences:
       Greed: 0
       Gluttony: 0
-      Pride: 0
-      Envy: 0
+      Pride: 10
+      Envy: 5
       Fury: 0
       outrage: 0
