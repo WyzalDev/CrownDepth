@@ -16,39 +16,39 @@ namespace CrownDepth.Limb
         {
             LimbType resultLimbs = LimbType.None;
 
-            var paralaxStageParam = Greed / Stats.STAT_THRESHOLD;
+            var paralaxStageParam = MathF.Truncate(Greed / Stats.STAT_THRESHOLD);
             if (CheckParameter(Stats.Greed, Greed))
             {
-                if (Stats.Greed / Stats.STAT_THRESHOLD > paralaxStageParam)
+                if (MathF.Truncate(Stats.Greed / Stats.STAT_THRESHOLD) > paralaxStageParam)
                 {
                     Greed = Stats.Greed;
                     resultLimbs = LimbType.RightArm;
                 }
             }
 
-            paralaxStageParam = Gluttony / Stats.STAT_THRESHOLD;
-            if (Stats.Gluttony / Stats.STAT_THRESHOLD > paralaxStageParam)
+            paralaxStageParam = MathF.Truncate(Gluttony / Stats.STAT_THRESHOLD);
+            if (MathF.Truncate(Stats.Gluttony / Stats.STAT_THRESHOLD) > paralaxStageParam)
             {
                 Gluttony = Stats.Gluttony;
                 resultLimbs |= LimbType.Body;
             }
             
-            paralaxStageParam = Pride / Stats.STAT_THRESHOLD;
-            if (Stats.Pride / Stats.STAT_THRESHOLD > paralaxStageParam)
+            paralaxStageParam = MathF.Truncate(Pride / Stats.STAT_THRESHOLD);
+            if (MathF.Truncate(Stats.Pride / Stats.STAT_THRESHOLD) > paralaxStageParam)
             {
                 Pride = Stats.Pride;
                 resultLimbs |= LimbType.Horns;
             }
             
-            paralaxStageParam = Envy / Stats.STAT_THRESHOLD;
-            if (Stats.Envy / Stats.STAT_THRESHOLD > paralaxStageParam)
+            paralaxStageParam = MathF.Truncate(Envy / Stats.STAT_THRESHOLD);
+            if (MathF.Truncate(Stats.Envy / Stats.STAT_THRESHOLD) > paralaxStageParam)
             {
                 Envy = Stats.Envy;
                 resultLimbs |= LimbType.LeftArm;
             }
             
-            paralaxStageParam = Fury / Stats.STAT_THRESHOLD;
-            if (Stats.Fury / Stats.STAT_THRESHOLD > paralaxStageParam)
+            paralaxStageParam = MathF.Truncate(Fury / Stats.STAT_THRESHOLD);
+            if (MathF.Truncate(Stats.Fury / Stats.STAT_THRESHOLD) > paralaxStageParam)
             {
                 Fury = Stats.Fury;
                 resultLimbs |= LimbType.Face;
@@ -56,6 +56,15 @@ namespace CrownDepth.Limb
             
             SetStats();
             return resultLimbs;
+        }
+
+        public void ResetStats()
+        {
+            Greed = 0;
+            Gluttony = 0;
+            Pride = 0;
+            Envy = 0;
+            Fury = 0;
         }
 
         private void SetStats()

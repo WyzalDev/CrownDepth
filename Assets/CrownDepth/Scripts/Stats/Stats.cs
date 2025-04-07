@@ -36,7 +36,16 @@ namespace CrownDepth.Stat
             if (Mathf.Approximately(Fury, MAX_STAT_POINT) && fury > 0) MaxStatIncreaseInvokes++;
             Fury = Mathf.Clamp(Fury + fury, 0f, MAX_STAT_POINT);
 
-            if (MaxStatIncreaseInvokes > 0) EventManager.InvokeMaxStatIncrease();
+            if (MaxStatIncreaseInvokes > 0) EventManager.InvokeTastyDemon();
+        }
+
+        public static void ResetStats()
+        {
+            Greed = 0f;
+            Gluttony = 0f;
+            Pride = 0f;
+            Envy = 0f;
+            Fury = 0f;
         }
     }
 }

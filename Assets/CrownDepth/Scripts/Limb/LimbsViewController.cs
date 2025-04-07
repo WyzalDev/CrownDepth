@@ -38,6 +38,16 @@ namespace CrownDepth.Limb
             }
         }
 
+        public void ResetLimbs()
+        {
+            horns.ResetStages();
+            body.ResetStages();
+            face.ResetStages();
+            leftArm.ResetStages();
+            rightArm.ResetStages();
+            limbsStageChecker.ResetStats();
+        }
+
     }
 
     [Serializable]

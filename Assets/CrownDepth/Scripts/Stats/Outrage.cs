@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace CrownDepth.Stat
 {
@@ -13,12 +14,17 @@ namespace CrownDepth.Stat
         {
             if(value <= 0) return;
             
-            var currentOutrage = _value / STAGE_THRESHOLD;
+            var currentOutrage = MathF.Truncate(_value / STAGE_THRESHOLD);
             var resultValue = Mathf.Clamp(_value + value, 0, MAX_OUTRAGE_VALUE);
             
-            if(currentOutrage < resultValue/STAGE_THRESHOLD || Mathf.Approximately(resultValue, 100f)) EventManager.InvokeOutrageStageIncrease();
+            if(currentOutrage <  MathF.Truncate(resultValue/STAGE_THRESHOLD) || Mathf.Approximately(resultValue, 100f)) EventManager.InvokeOutrageStageIncrease();
             
             _value = resultValue;
+        }
+
+        public static void Reset()
+        {
+            _value = 0;
         }
     }
 }

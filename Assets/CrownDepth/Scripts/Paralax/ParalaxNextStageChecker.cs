@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using CrownDepth.Stat;
 using UnityEngine;
 
@@ -17,10 +18,10 @@ namespace CrownDepth.Paralax
 
         public IEnumerator CheckNextStage()
         {
-            var paralaxStageParam = Greed / Stats.STAT_THRESHOLD;
+            var paralaxStageParam = MathF.Truncate(Greed / Stats.STAT_THRESHOLD);
             if (CheckParameter(Stats.Greed, Greed))
             {
-                if (Stats.Greed / Stats.STAT_THRESHOLD > paralaxStageParam)
+                if (MathF.Truncate(Stats.Greed / Stats.STAT_THRESHOLD) > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
@@ -28,10 +29,10 @@ namespace CrownDepth.Paralax
                 Greed = Stats.Greed;
             }
 
-            paralaxStageParam = Gluttony / Stats.STAT_THRESHOLD;
+            paralaxStageParam = MathF.Truncate(Gluttony / Stats.STAT_THRESHOLD);
             if (CheckParameter(Stats.Gluttony, Gluttony))
             {
-                if (Stats.Gluttony / Stats.STAT_THRESHOLD > paralaxStageParam)
+                if (MathF.Truncate(Stats.Gluttony / Stats.STAT_THRESHOLD) > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
@@ -39,10 +40,10 @@ namespace CrownDepth.Paralax
                 Gluttony = Stats.Gluttony;
             }
 
-            paralaxStageParam = Pride / Stats.STAT_THRESHOLD;
+            paralaxStageParam = MathF.Truncate(Pride / Stats.STAT_THRESHOLD);
             if (CheckParameter(Stats.Pride, Pride))
             {
-                if (Stats.Pride / Stats.STAT_THRESHOLD > paralaxStageParam)
+                if (MathF.Truncate(Stats.Pride / Stats.STAT_THRESHOLD) > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
@@ -50,10 +51,10 @@ namespace CrownDepth.Paralax
                 Pride = Stats.Pride;
             }
 
-            paralaxStageParam = Envy / Stats.STAT_THRESHOLD;
+            paralaxStageParam = MathF.Truncate(Envy / Stats.STAT_THRESHOLD);
             if (CheckParameter(Stats.Envy, Envy))
             {
-                if (Stats.Envy / Stats.STAT_THRESHOLD > paralaxStageParam)
+                if (MathF.Truncate(Stats.Envy / Stats.STAT_THRESHOLD) > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
@@ -61,16 +62,26 @@ namespace CrownDepth.Paralax
                 Envy = Stats.Envy;
             }
 
-            paralaxStageParam = Fury / Stats.STAT_THRESHOLD;
+            paralaxStageParam = MathF.Truncate(Fury / Stats.STAT_THRESHOLD);
             if (CheckParameter(Stats.Fury, Fury))
             {
-                if (Stats.Fury / Stats.STAT_THRESHOLD > paralaxStageParam)
+                if (MathF.Truncate(Stats.Fury / Stats.STAT_THRESHOLD) > paralaxStageParam)
                 {
                     yield return ApplyNextStage();
                 }
 
                 Fury = Stats.Fury;
             }
+        }
+
+        public void ResetParalax()
+        {
+            paralaxController.ResetParalax();
+            Greed = 0;
+            Gluttony = 0;
+            Pride = 0;
+            Envy = 0;
+            Fury = 0;
         }
 
         private void SetStats()

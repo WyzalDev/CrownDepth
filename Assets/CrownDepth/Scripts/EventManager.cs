@@ -12,16 +12,20 @@ namespace CrownDepth
         
         public static Action OnIncidentEnded;
 
-        public static Action OnMaxStatIncreased;
+        public static Action OnTastyDemon;
 
         public static Action OnOutrageStageIncreased;
+
+        public static Action OnResetGameScene;
         
         public static void InvokeGameEnd() => OnGameEnded?.Invoke();
         public static void InvokeGameRestart() => OnGameRestarted?.Invoke();
-        public static void InvokeMaxStatIncrease() => OnMaxStatIncreased?.Invoke();
+        public static void InvokeTastyDemon() => OnTastyDemon?.Invoke();
         public static void InvokeStartIncident() => OnIncidentStarted?.Invoke();
         public static void InvokeEndIncident() => OnIncidentEnded?.Invoke();
         
         public static void InvokeOutrageStageIncrease() => OnOutrageStageIncreased?.Invoke();
+        
+        public static void InvokeResetGameScene() => OnResetGameScene?.Invoke();
     }
 }

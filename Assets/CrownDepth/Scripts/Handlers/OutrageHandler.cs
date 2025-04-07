@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using CrownDepth.Stat;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -26,12 +27,15 @@ namespace CrownDepth.Handlers
         [SerializeField] private float sliderAnimationDuration = 1f;
         [SerializeField] private Ease sliderEase;
 
+        public Coroutine DisplayOutrageCoroutine { get; private set; }
+
         private const int MAX = 4;
         private int currentOutrage = 0;
         private WaitForSeconds cashed;
 
         private void Start()
         {
+            DontDestroyOnLoad(this);
             cashed = new WaitForSeconds(onScreenTime);
             EventManager.OnOutrageStageIncreased += IncreaseOutrageStage;
         }
@@ -44,11 +48,12 @@ namespace CrownDepth.Handlers
             }
             if (currentOutrage + 1 == MAX)
             {
+                EndGame.EndGameType = EndGameType.Loose;
                 EventManager.InvokeGameEnd();
             }
             
             text.text = outrageDescriptions[currentOutrage];
-            StartCoroutine(DisplayOutrageWindow());
+            DisplayOutrageCoroutine = StartCoroutine(DisplayOutrageWindow());
         }
         
         private IEnumerator DisplayOutrageWindow()
@@ -72,6 +77,15 @@ namespace CrownDepth.Handlers
                 .WaitForCompletion();
             outrageUI.gameObject.SetActive(false);
             currentOutrage++;
+        }
+
+        public void ResetOutrage()
+        {
+            Outrage.Reset();
+            currentOutrage = 0;
+            slider.value = 0.23f;
+            outrageUI.anchorMin = hidePosAnchorMin;
+            outrageUI.anchorMax = hidePosAnchorMax;
         }
         
         private void OnDestroy()

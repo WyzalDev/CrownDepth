@@ -83,9 +83,25 @@ namespace WyzalUtilities.Audio
             return Instance.FindDurationOfSound(soundName, soundType, containerName);
         }
 
+        public static AudioSource GetSoundSource(SoundType soundType)
+        {
+            return Instance.GetSource(soundType);
+        }
+
         #endregion
 
         #region Private Methods
+
+        private AudioSource GetSource(SoundType soundType)
+        {
+            switch (soundType)
+            {
+                case SoundType.Music:
+                    return globalMusicAudioSource;
+                default:
+                    return globalSfxAudioSource;
+            }
+        }
 
         private void PlayMusicWithFade(string musicName, FadeSettings fadeSettings, string containerName = null,
             AudioSource audioSource = null)

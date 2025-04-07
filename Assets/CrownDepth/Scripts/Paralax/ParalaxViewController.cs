@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using CrownDepth;
+using CrownDepth.Stat;
 using DG.Tweening;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class ParalaxViewController : MonoBehaviour
     [SerializeField] private RectTransform _paralax;
     [SerializeField] private float moveParalaxDuration = 1f;
     [Header("Stages")]
+    //[SerializeField] private AnchorsData _stageZero;
     [SerializeField] private AnchorsData _stageOne;
     [SerializeField] private AnchorsData _stageTwo;
     [SerializeField] private AnchorsData _stageThree;
@@ -22,6 +24,7 @@ public class ParalaxViewController : MonoBehaviour
     {
         if (currentStage == MAX_STAGES)
         {
+            EndGame.EndGameType = EndGameType.Win;
             EventManager.InvokeGameEnd();
             yield break;
         }
@@ -71,9 +74,9 @@ public class ParalaxViewController : MonoBehaviour
 
     public void ResetParalax()
     {
-        currentStage = 0;
+        currentStage = 1;
         _paralax.anchorMin = new Vector2(_paralax.anchorMin.x, _stageOne._anchorYMin);
-        _paralax.anchorMax = new Vector2(_paralax.anchorMax.x, _stageTwo._anchorYMax);
+        _paralax.anchorMax = new Vector2(_paralax.anchorMax.x, _stageOne._anchorYMax);
     }
     
 }

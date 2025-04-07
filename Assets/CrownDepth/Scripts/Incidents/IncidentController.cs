@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using CrownDepth.Dialogue;
+using CrownDepth.Handlers;
 using CrownDepth.Infrastructure;
+using CrownDepth.Limb;
+using CrownDepth.Paralax;
+using CrownDepth.Stat;
 using UnityEngine;
-using WyzalUtilities.Audio;
 
 namespace CrownDepth.Incidents
 {
@@ -15,14 +19,17 @@ namespace CrownDepth.Incidents
 
         private void Start()
         {
+            EventManager.OnResetGameScene += ResetCoroutine;
             //AudioContext.PlayGlobalMusic("crocodile");
             if (_incidents.Count() == 0) return;
-            ResetUI();
             StartCoroutine(ExecuteIncidents());
         }
 
         private IEnumerator ExecuteIncidents()
         {
+            //Wait one frame until Start exits
+            yield return null;
+            
             //Play cycle
             while (_incidents.Count() > currentIncidentIndex)
             {
@@ -31,15 +38,19 @@ namespace CrownDepth.Incidents
             }
 
             //End of the game
+            EndGame.EndGameType = EndGameType.LooseByOldness;
             EventManager.InvokeGameEnd();
         }
 
-        private void ResetUI()
+        private void ResetCoroutine()
         {
-            if (!ServiceLocatorMono.Instance.TryGetService<DialogueController>(out var dialogueController)) return;
-            if (!ServiceLocatorMono.Instance.TryGetService<ChoiceUIController>(out var choiceController)) return;
-            dialogueController.ResetDialogueUI();
-            choiceController.ResetChoiceUI();
+            StopCoroutine(ExecuteIncidents());
+            currentIncidentIndex = 0;
+        }
+
+        private void OnDestroy()
+        {
+            EventManager.OnResetGameScene -= ResetCoroutine;
         }
     }
 }

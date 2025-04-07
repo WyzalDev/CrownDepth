@@ -1,4 +1,5 @@
 ﻿using CrownDepth.Dialogue;
+using CrownDepth.Handlers;
 using CrownDepth.Limb;
 using CrownDepth.Paralax;
 using UnityEngine;
@@ -37,6 +38,8 @@ namespace CrownDepth.Infrastructure
         [SerializeField] private ParalaxNextStageChecker paralaxNextStageChecker;
         
         [SerializeField] private LimbsViewController limbsViewController;
+        
+        [SerializeField] private OutrageHandler outrageHandler;
 
 
         //Register all server services and entities here 
@@ -54,6 +57,7 @@ namespace CrownDepth.Infrastructure
             _serviceLocator.Register<ChoiceUIController>(choiceUIController);
             _serviceLocator.Register<ParalaxNextStageChecker>(paralaxNextStageChecker);
             _serviceLocator.Register<LimbsViewController>(limbsViewController);
+            _serviceLocator.Register<OutrageHandler>(outrageHandler);
         }
 
         #endregion
