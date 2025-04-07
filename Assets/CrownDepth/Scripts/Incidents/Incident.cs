@@ -241,6 +241,7 @@ namespace CrownDepth.Incidents
         ChildBrownW,
         ChildBlondM,
         ChildBlondW,
-        ChildBrownM
+        ChildBrownM,
+        Void
     }
 }

@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 924d820e9d360ac49aaac7d64f2f568c, type: 2}
-  npcType: 6
   consequence:
-    Greed: 0
+    Greed: 33
     Gluttony: 0
     Pride: 0
     Envy: 0
@@ -26,7 +25,7 @@ MonoBehaviour:
     cardDescription: Choice me!!! I'm card 1.
     consequences:
       Greed: 0
-      Gluttony: 0
+      Gluttony: 44
       Pride: 0
       Envy: 0
       Fury: 0
