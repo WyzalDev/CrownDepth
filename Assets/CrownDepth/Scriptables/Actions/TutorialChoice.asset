@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 924d820e9d360ac49aaac7d64f2f568c, type: 2}
-  npcType: 0
+  npcType: 6
   consequence:
     Greed: 0
     Gluttony: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     consequences:
       Greed: 0
       Gluttony: 0
-      Pride: 33
+      Pride: 0
       Envy: 0
       Fury: 0
       outrage: 0

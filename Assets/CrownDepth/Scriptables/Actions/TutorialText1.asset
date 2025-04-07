@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b8b46088f86d347b9d7aa4872a627c, type: 3}
   m_Name: TutorialText1
   m_EditorClassIdentifier: 
-  speakerName: Tom
+  speakerName: Advisor
   paragraphs:
   - Hello my king, welcome to tutorial, i'm Tom! Press with mouse on somewhere on
     screen to skip.

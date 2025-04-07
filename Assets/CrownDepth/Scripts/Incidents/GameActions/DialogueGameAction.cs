@@ -7,7 +7,6 @@ namespace CrownDepth.Incidents.GameActions
     public class DialogueGameAction : GameAction
     {
         [SerializeField] public DialogueText dialogueText;
-        [SerializeField] public NPCType npcType;
         [SerializeField] public Consequences consequence;
         
     }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8634817394bf4778a2585c1be356e3ee, type: 3}
   m_Name: TutorialDialogueWithReactions
   m_EditorClassIdentifier: 
-  speakerName: Tom
+  speakerName: Advisor
   paragraphs:
   - Hello, it's me again. I forgot to tell you about choices in this game.
   - Look on to this. Card with deep choices appears! Quick choice one card!
