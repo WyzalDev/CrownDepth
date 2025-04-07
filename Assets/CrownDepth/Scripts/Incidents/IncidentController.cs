@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using CrownDepth.Dialogue;
-using CrownDepth.Handlers;
-using CrownDepth.Infrastructure;
-using CrownDepth.Limb;
-using CrownDepth.Paralax;
 using CrownDepth.Stat;
 using UnityEngine;
+using WyzalUtilities.Audio;
 
 namespace CrownDepth.Incidents
 {
@@ -16,20 +11,18 @@ namespace CrownDepth.Incidents
     {
         [SerializeField] private List<Incident> _incidents;
         [SerializeField] private int currentIncidentIndex = 0;
+        [SerializeField] private string firstStageMusicName;
 
         private void Start()
         {
             EventManager.OnResetGameScene += ResetCoroutine;
-            //AudioContext.PlayGlobalMusic("crocodile");
             if (_incidents.Count() == 0) return;
             StartCoroutine(ExecuteIncidents());
         }
-
+        
         private IEnumerator ExecuteIncidents()
         {
-            //Wait one frame until Start exits
-            yield return null;
-            
+            yield return AudioContext.TurnOnSource(0.2f);
             //Play cycle
             while (_incidents.Count() > currentIncidentIndex)
             {

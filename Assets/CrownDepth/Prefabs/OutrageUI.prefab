@@ -345,7 +345,7 @@ MonoBehaviour:
   - The king was banished from his own kingdom...
   outrageUI: {fileID: 3635335819108252545}
   hideOrDisplayDuration: 2
-  onScreenTime: 5
+  onScreenTime: 3
   hideOrDisplayEase: 28
   hidePosAnchorMin: {x: 0, y: 2}
   hidePosAnchorMax: {x: 1, y: 3}

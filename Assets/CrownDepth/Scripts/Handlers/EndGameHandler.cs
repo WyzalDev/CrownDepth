@@ -7,7 +7,6 @@ using CrownDepth.SceneManagement;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
-using WyzalUtilities.Audio;
 
 namespace CrownDepth.Handlers
 {
@@ -29,15 +28,8 @@ namespace CrownDepth.Handlers
         private IEnumerator EndGame()
         {
             _globalFade.gameObject.SetActive(true);
-            var sfxGlobalSource = AudioContext.GetSoundSource(SoundType.Sfx);
-            var musicGloablSource = AudioContext.GetSoundSource(SoundType.Music);
             
-            //Do fade screen and audio
-            var sequence = DOTween.Sequence();
-            yield return sequence.Append(_globalFade.DOFade(1f, _fadeDuration).SetEase(_fadeEase))
-                .Join(sfxGlobalSource.DOFade(0f, _fadeDuration).SetEase(_fadeEase))
-                .Join(musicGloablSource.DOFade(0f, _fadeDuration).SetEase(_fadeEase))
-                .WaitForCompletion();
+            //ToDo fade screen and audio
             
             EventManager.InvokeResetGameScene();
             

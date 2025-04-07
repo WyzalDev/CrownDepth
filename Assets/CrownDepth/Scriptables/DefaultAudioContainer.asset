@@ -12,10 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d0111bfc3c44ce805b0f49f2838b65, type: 3}
   m_Name: DefaultAudioContainer
   m_EditorClassIdentifier: 
-  musicSounds:
-  - name: crocodile
-    volume: 0.25
-    clip: {fileID: 8300000, guid: 9513c3123d836c14796427ee30291d34, type: 3}
+  musicSounds: []
   sfxSounds:
   - name: steps
     volume: 0.5

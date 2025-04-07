@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using WyzalUtilities.Data;
@@ -19,8 +20,8 @@ namespace WyzalUtilities.Audio
         #region Properties
 
         public static AudioContext Instance { get; private set; }
-
         public string DefaultContainerName => defaultContainer;
+        public const float fadeDuration = 2f;
 
         #endregion
 
@@ -28,22 +29,16 @@ namespace WyzalUtilities.Audio
 
         private void Awake()
         {
-            Init(this);
-        }
-
-        private static void Init(AudioContext context)
-        {
             if (Instance == null)
             {
-                Instance = context;
-                DontDestroyOnLoad(context);
+                Instance = this;
+                DontDestroyOnLoad(this);
             }
             else
             {
-                Destroy(context.gameObject);
+                Destroy(this.gameObject);
             }
         }
-
         #endregion
 
         #region Public Methods
@@ -55,16 +50,16 @@ namespace WyzalUtilities.Audio
         /// <param name="fadeSettings">Class that handles fade parameters. if null - no fade applied</param>
         /// <param name="containerName">Container name where music stores. if null - default container will be used</param>
         /// <param name="audioSource">Audio Source to play music. if null - global audio source will be used.</param>
-        public static void PlayGlobalMusic(string musicName, FadeSettings fadeSettings = null,
+        public static Sequence PlayGlobalMusic(string musicName, FadeSettings fadeSettings = null,
             string containerName = null, AudioSource audioSource = null)
         {
             if (fadeSettings == null)
             {
                 Instance.PlayMusic(musicName, containerName, audioSource);
-                return;
+                return null;
             }
 
-            Instance.PlayMusicWithFade(musicName, fadeSettings, containerName, audioSource);
+            return Instance.PlayMusicWithFade(musicName, fadeSettings, containerName, audioSource);
         }
 
         /// <summary>
@@ -88,10 +83,34 @@ namespace WyzalUtilities.Audio
             return Instance.GetSource(soundType);
         }
 
+        public static IEnumerator TurnOffGlobalSounds(float duration = fadeDuration)
+        {
+            yield return Instance.TurnOffSoundSource(duration);
+        }
+
+        public static IEnumerator TurnOnSource(float duration = fadeDuration)
+        {
+            yield return Instance.TurnOnGlobalSource(duration);
+        }
         #endregion
 
         #region Private Methods
+        private IEnumerator TurnOnGlobalSource(float duration, Ease easeType = Ease.InOutQuart)
+        {
+            var sequence = DOTween.Sequence();
+            yield return sequence.Append(globalMusicAudioSource.DOFade(1f, duration).SetEase(easeType))
+                .Join(globalSfxAudioSource.DOFade(1f, duration).SetEase(easeType))
+                .WaitForCompletion();
+        }
 
+        private IEnumerator TurnOffSoundSource(float duration, Ease easeType = Ease.InOutQuart)
+        {
+            var sequence = DOTween.Sequence();
+            yield return sequence.Append(globalMusicAudioSource.DOFade(0f, duration).SetEase(easeType))
+                .Join(globalSfxAudioSource.DOFade(0f, duration).SetEase(easeType))
+                .WaitForCompletion();
+        }
+        
         private AudioSource GetSource(SoundType soundType)
         {
             switch (soundType)
@@ -103,7 +122,7 @@ namespace WyzalUtilities.Audio
             }
         }
 
-        private void PlayMusicWithFade(string musicName, FadeSettings fadeSettings, string containerName = null,
+        private Sequence PlayMusicWithFade(string musicName, FadeSettings fadeSettings, string containerName = null,
             AudioSource audioSource = null)
         {
             if (audioSource == null)
@@ -116,6 +135,7 @@ namespace WyzalUtilities.Audio
                     .OnComplete(() => PlayMusic(musicName, containerName, audioSource)));
             sequence.Append(
                 audioSource.DOFade(endVolume, fadeSettings.durationOut).SetEase(fadeSettings.easeOut).SetUpdate(true));
+            return sequence;
         }
 
         private void PlayMusic(string musicName, string containerName = null,

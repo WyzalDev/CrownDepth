@@ -5,6 +5,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using WyzalUtilities.Audio;
 
 public class GameEndController : MonoBehaviour
 {
@@ -71,6 +72,8 @@ public class GameEndController : MonoBehaviour
     private IEnumerator EndGameStatsListAnimation()
     {
         var cachedWait = new WaitForSeconds(waitBetweenStatisticsElements);
+        
+        yield return cachedWait;
         MainPanel.gameObject.SetActive(true);
         yield return cachedWait;
         

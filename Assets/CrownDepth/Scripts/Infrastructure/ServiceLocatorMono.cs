@@ -16,8 +16,6 @@ namespace CrownDepth.Infrastructure
 
         private void Awake()
         {
-            if (Instance != null) return;
-            DontDestroyOnLoad(this);
             _serviceLocator = new ServiceLocator();
             RegisterAllDependencies();
             Instance = this;
