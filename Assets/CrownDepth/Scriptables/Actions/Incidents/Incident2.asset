@@ -25,9 +25,9 @@ MonoBehaviour:
     cardDescription: Let a bridge be built of stone. Modesty is the path to grace
     consequences:
       Greed: 7
-      Gluttony: 0
-      Pride: 0
-      Envy: 0
+      Gluttony: 2
+      Pride: 2
+      Envy: 2
       Fury: 2
       outrage: 0
   SecondCardDto:

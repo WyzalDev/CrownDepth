@@ -25,9 +25,9 @@ MonoBehaviour:
     cardDescription: Perform ritual. This benefit for everybody.
     consequences:
       Greed: 6
-      Gluttony: 0
+      Gluttony: 2
       Pride: 4
-      Envy: 0
+      Envy: 4
       Fury: 10
       outrage: 10
   SecondCardDto:

@@ -24,11 +24,11 @@ MonoBehaviour:
   FirstCardDto:
     cardDescription: Send a doctor and ointments at the expense of the treasury.
     consequences:
-      Greed: 0
+      Greed: 3
       Gluttony: 7
-      Pride: 0
-      Envy: 0
-      Fury: 0
+      Pride: 3
+      Envy: 3
+      Fury: 3
       outrage: 3
   SecondCardDto:
     cardDescription: We have no funds. Let them pray

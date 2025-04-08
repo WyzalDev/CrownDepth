@@ -27,8 +27,8 @@ MonoBehaviour:
       Greed: 5
       Gluttony: 1
       Pride: 0
-      Envy: 0
-      Fury: 0
+      Envy: 2
+      Fury: 4
       outrage: 7
   SecondCardDto:
     cardDescription: 'Force them to work at old prices. '
@@ -37,5 +37,5 @@ MonoBehaviour:
       Gluttony: 0
       Pride: 0
       Envy: 0
-      Fury: 1
+      Fury: 3
       outrage: 6
