@@ -897,6 +897,9 @@ MonoBehaviour:
   - name: second tutorial
     action: {fileID: 11400000, guid: a956fc3138e0f5a4ca2d2256da067639, type: 2}
     npcType: 6
+  - name: Tutorial 3
+    action: {fileID: 11400000, guid: 2076f3eb7b6a0b4419ab805fdd759262, type: 2}
+    npcType: 12
   - name: Incident1
     action: {fileID: 11400000, guid: 066f3bba439da1d4a8b20967c918d5ce, type: 2}
     npcType: 0
@@ -1948,6 +1951,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2953336523947991928, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 2953336523947991928, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 3081397119821713996, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1975,6 +1986,14 @@ PrefabInstance:
     - target: {fileID: 3081397119821713996, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3657437141342787873, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 3657437141342787873, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 3929458576797085818, guid: b20d91b0571cc6849941bb1199c15748, type: 3}
       propertyPath: m_Pivot.x

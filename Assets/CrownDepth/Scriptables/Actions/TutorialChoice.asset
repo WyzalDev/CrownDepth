@@ -15,7 +15,7 @@ MonoBehaviour:
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 924d820e9d360ac49aaac7d64f2f568c, type: 2}
   consequence:
-    Greed: 33
+    Greed: 0
     Gluttony: 0
     Pride: 0
     Envy: 0

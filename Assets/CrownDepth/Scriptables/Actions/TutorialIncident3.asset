@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cae8d56adc4b738262cd2dfd62c6cc, type: 3}
+  m_Name: TutorialIncident3
+  m_EditorClassIdentifier: 
+  actionType: 0
+  dialogueText: {fileID: 11400000, guid: f9973f8acb6d9f8488f3d319fb0ffdc4, type: 2}
+  consequence:
+    Greed: 0
+    Gluttony: 0
+    Pride: 0
+    Envy: 0
+    Fury: 0
+    outrage: 0
