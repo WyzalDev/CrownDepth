@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: c1c2f158a35be5d4a8a4d519f08e8e8c, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -25,18 +24,18 @@ MonoBehaviour:
   FirstCardDto:
     cardDescription: If pain brings gold, let them suffer
     consequences:
-      Greed: 3
-      Gluttony: 0
-      Pride: 0
+      Greed: 5
+      Gluttony: 10
+      Pride: 4
       Envy: 0
-      Fury: 0
-      outrage: 0
+      Fury: 2
+      outrage: 7
   SecondCardDto:
     cardDescription: This will not happen. Pain is not a currency
     consequences:
       Greed: 0
       Gluttony: 0
-      Pride: 0
+      Pride: 5
       Envy: 0
-      Fury: 0
+      Fury: 2
       outrage: 0

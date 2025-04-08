@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 0ed3bdab3fb1b32499dbdee74da55f3d, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -26,7 +25,7 @@ MonoBehaviour:
     cardDescription: Take under the roof and listen to the predictions.
     consequences:
       Greed: 0
-      Gluttony: 1
+      Gluttony: 0
       Pride: 0
       Envy: 0
       Fury: 0
@@ -34,9 +33,9 @@ MonoBehaviour:
   SecondCardDto:
     cardDescription: 'Execute for heresy and sedition. '
     consequences:
-      Greed: 0
-      Gluttony: 0
-      Pride: 0
-      Envy: 0
-      Fury: 1
-      outrage: 0
+      Greed: 3
+      Gluttony: 2
+      Pride: 1
+      Envy: 5
+      Fury: 4
+      outrage: 7

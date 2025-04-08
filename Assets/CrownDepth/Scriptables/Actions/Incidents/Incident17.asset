@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 14e80210100b0814480710e798c50200, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -25,18 +24,18 @@ MonoBehaviour:
   FirstCardDto:
     cardDescription: Do it. The main thing is to support the elite.
     consequences:
-      Greed: 1
+      Greed: 2
       Gluttony: 2
       Pride: 0
       Envy: 0
-      Fury: 0
-      outrage: 0
+      Fury: 5
+      outrage: 8
   SecondCardDto:
     cardDescription: You are a monster. Get out.
     consequences:
       Greed: 0
-      Gluttony: 0
-      Pride: 0
+      Gluttony: 2
+      Pride: 2
       Envy: 0
       Fury: 2
       outrage: 0

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 816653aa1cc7d70489f92ef4b78c0960, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -30,7 +29,7 @@ MonoBehaviour:
       Pride: 1
       Envy: 0
       Fury: 0
-      outrage: 0
+      outrage: 6
   SecondCardDto:
     cardDescription: Arrest them and order them to be broken.
     consequences:

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 440fd9cf0688c1f4b8e75be7b30cd5b6, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -26,11 +25,11 @@ MonoBehaviour:
     cardDescription: Execute him for desertion
     consequences:
       Greed: 0
-      Gluttony: 0
+      Gluttony: 5
       Pride: 0
       Envy: 0
       Fury: 10
-      outrage: 0
+      outrage: 3
   SecondCardDto:
     cardDescription: Let go. One warrior is not a loss.
     consequences:
@@ -39,4 +38,4 @@ MonoBehaviour:
       Pride: 0
       Envy: 0
       Fury: 0
-      outrage: 0
+      outrage: 2

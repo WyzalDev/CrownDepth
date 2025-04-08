@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 029ecdbef2d3da24d9454fb86223f977, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -30,7 +29,7 @@ MonoBehaviour:
       Pride: 0
       Envy: 0
       Fury: 1
-      outrage: 0
+      outrage: 8
   SecondCardDto:
     cardDescription: I don't bargain with faceless people
     consequences:

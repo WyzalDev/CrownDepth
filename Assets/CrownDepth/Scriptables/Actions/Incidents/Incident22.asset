@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 25c4529561ebdd84aa00d3dc7a17827e, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -27,10 +26,10 @@ MonoBehaviour:
     consequences:
       Greed: 0
       Gluttony: 0
-      Pride: 1
+      Pride: 4
       Envy: 0
-      Fury: 1
-      outrage: 0
+      Fury: 4
+      outrage: 5
   SecondCardDto:
     cardDescription: Melt the sword in the temple fire
     consequences:

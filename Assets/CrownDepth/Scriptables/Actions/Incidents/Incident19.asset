@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 45f9bef5f6508844ea426a6cf624d0ad, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -25,12 +24,12 @@ MonoBehaviour:
   FirstCardDto:
     cardDescription: 'Allow and choose a bishop '
     consequences:
-      Greed: 0
-      Gluttony: 1
+      Greed: 5
+      Gluttony: 5
       Pride: 0
       Envy: 0
-      Fury: 1
-      outrage: 0
+      Fury: 5
+      outrage: 5
   SecondCardDto:
     cardDescription: Ban and order the servant to be killed
     consequences:

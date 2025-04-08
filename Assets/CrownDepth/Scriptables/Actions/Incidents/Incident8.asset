@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 72d58d60dddcc3c42b81a0aa8ade1442, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -26,17 +25,17 @@ MonoBehaviour:
     cardDescription: Allow the slaughter of royal sheep
     consequences:
       Greed: 0
-      Gluttony: 10
+      Gluttony: 0
       Pride: 0
-      Envy: 0
+      Envy: 4
       Fury: 0
       outrage: 0
   SecondCardDto:
     cardDescription: These are your problems. It's your own fault
     consequences:
-      Greed: 5
+      Greed: 7
       Gluttony: 0
-      Pride: 0
-      Envy: 0
-      Fury: 10
-      outrage: 0
+      Pride: 5
+      Envy: 3
+      Fury: 4
+      outrage: 7

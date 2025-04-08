@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 7bd803a493e379546b607b0e9c4ef161, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -25,18 +24,18 @@ MonoBehaviour:
   FirstCardDto:
     cardDescription: 'Approve price increases. '
     consequences:
-      Greed: 0
+      Greed: 5
       Gluttony: 1
       Pride: 0
       Envy: 0
       Fury: 0
-      outrage: 0
+      outrage: 7
   SecondCardDto:
     cardDescription: 'Force them to work at old prices. '
     consequences:
-      Greed: 0
+      Greed: 7
       Gluttony: 0
       Pride: 0
       Envy: 0
       Fury: 1
-      outrage: 0
+      outrage: 6

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 809ac67dd7c383b4c89564e0ca6e4661, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -25,18 +24,18 @@ MonoBehaviour:
   FirstCardDto:
     cardDescription: Condemn the mother, but adopt the child
     consequences:
-      Greed: 0
-      Gluttony: 0
+      Greed: 1
+      Gluttony: 2
       Pride: 5
-      Envy: 0
-      Fury: 0
+      Envy: 2
+      Fury: 1
       outrage: 0
   SecondCardDto:
     cardDescription: Execute the thief along with the child
     consequences:
       Greed: 5
-      Gluttony: 0
-      Pride: 0
-      Envy: 0
-      Fury: 0
-      outrage: 0
+      Gluttony: 2
+      Pride: 5
+      Envy: 2
+      Fury: 7
+      outrage: 10

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: b8c23504100dfc748b2edbeb264266d0, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -29,14 +28,14 @@ MonoBehaviour:
       Gluttony: 0
       Pride: 2
       Envy: 0
-      Fury: 0
-      outrage: 0
+      Fury: 2
+      outrage: 3
   SecondCardDto:
     cardDescription: What are you talking about? My heart is pure
     consequences:
       Greed: 0
-      Gluttony: 0
-      Pride: 0
-      Envy: 1
+      Gluttony: 2
+      Pride: 2
+      Envy: 2
       Fury: 1
-      outrage: 0
+      outrage: 1

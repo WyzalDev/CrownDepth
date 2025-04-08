@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: a517ca60e1a01ef47ac4bf729838bac1, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -27,16 +26,16 @@ MonoBehaviour:
     consequences:
       Greed: 0
       Gluttony: 0
-      Pride: 0
+      Pride: 5
       Envy: 0
-      Fury: 10
+      Fury: 5
       outrage: 0
   SecondCardDto:
     cardDescription: Do it. My eternal power is more necessary than life.
     consequences:
-      Greed: 2
-      Gluttony: 0
-      Pride: 0
-      Envy: 0
+      Greed: 7
+      Gluttony: 2
+      Pride: 5
+      Envy: 5
       Fury: 0
-      outrage: 0
+      outrage: 10

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 70b36c60153fdc740ae55ee717aa52ce, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -25,18 +24,18 @@ MonoBehaviour:
   FirstCardDto:
     cardDescription: Let a bridge be built of stone. Modesty is the path to grace
     consequences:
-      Greed: 1
+      Greed: 7
       Gluttony: 0
       Pride: 0
       Envy: 0
-      Fury: 0
+      Fury: 2
       outrage: 0
   SecondCardDto:
     cardDescription: 'Gold will show the power of the throne!! '
     consequences:
-      Greed: 0
-      Gluttony: 0
-      Pride: 1
+      Greed: 8
+      Gluttony: 6
+      Pride: 2
       Envy: 0
-      Fury: 2
-      outrage: 0
+      Fury: 4
+      outrage: 4

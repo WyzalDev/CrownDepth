@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actionType: 1
   dialogueText: {fileID: 11400000, guid: 5fef8db9a4876af47b3e1ccb38725838, type: 2}
-  npcType: 0
   consequence:
     Greed: 0
     Gluttony: 0
@@ -34,9 +33,9 @@ MonoBehaviour:
   SecondCardDto:
     cardDescription: Let suffering teach you to take care!
     consequences:
-      Greed: 0
-      Gluttony: 1
-      Pride: 0
-      Envy: 0
-      Fury: 0
-      outrage: 0
+      Greed: 6
+      Gluttony: 2
+      Pride: 1
+      Envy: 2
+      Fury: 5
+      outrage: 8
