@@ -885,6 +885,75 @@ MonoBehaviour:
   - name: second tutorial
     action: {fileID: 11400000, guid: a956fc3138e0f5a4ca2d2256da067639, type: 2}
     npcType: 6
+  - name: Incident1
+    action: {fileID: 11400000, guid: 066f3bba439da1d4a8b20967c918d5ce, type: 2}
+    npcType: 0
+  - name: Incident2
+    action: {fileID: 11400000, guid: 1947efbad344a514fa1a8245a1c9cfd7, type: 2}
+    npcType: 14
+  - name: Incident3
+    action: {fileID: 11400000, guid: f956a37c997c24440bc5b05eb3f160c3, type: 2}
+    npcType: 14
+  - name: Incident4
+    action: {fileID: 11400000, guid: 17bf71aa170a810488da5556756a236f, type: 2}
+    npcType: 9
+  - name: Incident5
+    action: {fileID: 11400000, guid: 52610bec2ec17dd458e15d0bc58b426c, type: 2}
+    npcType: 1
+  - name: Incident6
+    action: {fileID: 11400000, guid: 1c6026caa31cc7d41aa9f779440e5b43, type: 2}
+    npcType: 4
+  - name: Incident7
+    action: {fileID: 11400000, guid: b332e8840454f7342b960c3c508cc6c5, type: 2}
+    npcType: 10
+  - name: Incident8
+    action: {fileID: 11400000, guid: c5f773ee175a10349b874fbd15d92370, type: 2}
+    npcType: 9
+  - name: Incident9
+    action: {fileID: 11400000, guid: 2752453011e726e4db8a061c0d8131e2, type: 2}
+    npcType: 17
+  - name: Incident10
+    action: {fileID: 11400000, guid: efbea414c579cfc4c877a65d649f2b6a, type: 2}
+    npcType: 11
+  - name: Incident11
+    action: {fileID: 11400000, guid: 714e39c4874b5c64d98f90073e898df0, type: 2}
+    npcType: 2
+  - name: Incident12
+    action: {fileID: 11400000, guid: 6217e7ee47f088e48bb04c95ca612b5b, type: 2}
+    npcType: 6
+  - name: Incident13
+    action: {fileID: 11400000, guid: e56cfd22ca828604fbd9f3353183d1f2, type: 2}
+    npcType: 12
+  - name: Incident14
+    action: {fileID: 11400000, guid: 7169788b50166b042a539a081a127122, type: 2}
+    npcType: 20
+  - name: Incident15
+    action: {fileID: 11400000, guid: bf2750e6d976b2848bc92b1e6839da9b, type: 2}
+    npcType: 15
+  - name: Incident16
+    action: {fileID: 11400000, guid: fc86a1d25e1f7bf4a86bfb5272b10aed, type: 2}
+    npcType: 7
+  - name: Incident17
+    action: {fileID: 11400000, guid: b37a8ad49ff138d4e85eea6057d386c2, type: 2}
+    npcType: 6
+  - name: Incident18
+    action: {fileID: 11400000, guid: 03931208fc102bb4ba661c77024abdd2, type: 2}
+    npcType: 14
+  - name: Incident19
+    action: {fileID: 11400000, guid: 869cf0cab715d674aae2d46f167f4701, type: 2}
+    npcType: 20
+  - name: Incident20
+    action: {fileID: 11400000, guid: 0b3eefac42f18894c8ab2e51b855a8f0, type: 2}
+    npcType: 5
+  - name: Incident21
+    action: {fileID: 11400000, guid: daed566beb25e5048b152826af8d0280, type: 2}
+    npcType: 11
+  - name: Incident22
+    action: {fileID: 11400000, guid: 363822941af0e8340be7f47aad56bf19, type: 2}
+    npcType: 13
+  - name: Incident23
+    action: {fileID: 11400000, guid: ca839a3073dedd74eb03ca1d5a48c237, type: 2}
+    npcType: 19
   currentIncidentIndex: 0
 --- !u!224 &1140572350 stripped
 RectTransform:
