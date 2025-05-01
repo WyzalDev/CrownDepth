@@ -24,7 +24,7 @@ namespace CrownDepth
             yield return AudioContext.TurnOffGlobalSounds(1f);
             mainPanel.gameObject.SetActive(false);
             Stats.ResetStats();
-            SceneLoader.LoadScene(SceneName.Game);
+            yield return SceneLoader.LoadScene(SceneName.Game);
         }
     }
 }

@@ -48,7 +48,7 @@ namespace CrownDepth.Handlers
             FullReset();
 
             //ChangeScene
-            SceneLoader.LoadScene(SceneName.Results);
+            yield return SceneLoader.LoadScene(SceneName.Results);
         }
         
         private void FullReset()

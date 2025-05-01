@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,9 +7,7 @@ namespace CrownDepth.SceneManagement
     public static class SceneLoader
     {
         
-        private static Task cachedTask = Task.Delay(100); 
-        
-        public static async void LoadScene(SceneName sceneName) {
+        public static IEnumerator LoadScene(SceneName sceneName) {
             var scene = SceneManager.LoadSceneAsync(sceneName.ToString());
             if (scene is not null)
             {
@@ -18,11 +16,12 @@ namespace CrownDepth.SceneManagement
             else
             {
                 Debug.LogWarning($"Scene {sceneName} is not loaded");
-                return;
+                yield break;
             }
+            
             do
             {
-                await cachedTask;
+                yield return null;
             } while (scene.progress < 0.9f);
             scene.allowSceneActivation = true;
         }
